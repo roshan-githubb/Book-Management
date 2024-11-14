@@ -86,6 +86,20 @@ class BookController extends Controller
     return redirect()->route('books.index')->with('success', 'Book added successfully.');
 }
 
+public function edit($id)
+{
+   
+    $book = Book::findOrFail($id);
+
+    
+    $categories = Category::all();
+
+    
+    return view('books.edit', compact('book', 'categories'));
+}
+
+
+
 
     public function update(StoreBookRequest $request, Book $book)
     {
