@@ -13,7 +13,7 @@
 
             <?php if($book->image): ?>
                 <div>
-                    <img src="<?php echo e(Storage::url('images/'.$book->image)); ?>" alt="Book Image" class="img-fluid" style="max-height: 400px;">
+                    <img src="<?php echo e(asset('storage/' . $book->image)); ?>" alt="Book Image" class="img-fluid" style="max-height: 400px;">
                 </div>
             <?php else: ?>
                 <p>No image available</p>

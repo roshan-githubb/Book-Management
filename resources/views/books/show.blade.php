@@ -13,7 +13,7 @@
 
             @if ($book->image)
                 <div>
-                    <img src="{{ Storage::url('images/'.$book->image) }}" alt="Book Image" class="img-fluid" style="max-height: 400px;">
+                    <img src="{{ asset('storage/' . $book->image) }}" alt="Book Image" class="img-fluid" style="max-height: 400px;">
                 </div>
             @else
                 <p>No image available</p>
